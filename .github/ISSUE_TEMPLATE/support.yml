@@ -1,0 +1,66 @@
+name: TapMask Support Request
+description: Report a TapMask problem without sharing private images or personal data.
+title: "[Support] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem.
+
+        **Do not upload private, personal, original, or unmasked images.**
+        Remove names, addresses, phone numbers, account details, faces, and other sensitive information from screenshots.
+
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I confirm that this report contains no private images, personal information, credentials, or payment information.
+          required: true
+
+  - type: input
+    id: app-version
+    attributes:
+      label: TapMask version
+      placeholder: "For example: 1.5.0"
+    validations:
+      required: true
+
+  - type: input
+    id: ios-version
+    attributes:
+      label: iOS version
+      placeholder: "For example: iOS 26.5"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected feature
+      options:
+        - Photo import
+        - Camera
+        - Detection and masking
+        - Export
+        - Share extension
+        - TapMask Pro purchase or restore
+        - Language or appearance
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Describe what you did and what happened. Do not include private data.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
